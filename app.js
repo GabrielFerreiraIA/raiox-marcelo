@@ -78,27 +78,6 @@ filterButtons.forEach((button) => button.addEventListener('click', () => {
   levelRows.forEach((row) => row.classList.toggle('dim', value !== 'all' && row.dataset.front !== value));
 }));
 
-const feedback = document.querySelector('#copied');
-const fallback = document.querySelector('#copy-fallback');
-document.querySelector('#copy').addEventListener('click', async () => {
-  const selected = document.querySelector('input[name="focus"]:checked').value;
-  const message = 'Gabriel, li o Raio-X da Imohills. Na conversa com o Milton quero começar por: ' + selected + '.';
-  try {
-    await navigator.clipboard.writeText(message);
-    fallback.hidden = true;
-    feedback.textContent = 'Mensagem copiada. Agora é só colar no WhatsApp.';
-  } catch {
-    fallback.value = message;
-    fallback.hidden = false;
-    fallback.select();
-    feedback.textContent = 'Selecione e copie a mensagem abaixo.';
-  }
-});
-document.querySelectorAll('input[name="focus"]').forEach((input) => input.addEventListener('change', () => {
-  feedback.textContent = '';
-  fallback.hidden = true;
-}));
-
 const chapters = [...document.querySelectorAll('.chapter')];
 const navLinks = [...document.querySelectorAll('.desktop-nav a,.dock a')];
 const line = document.querySelector('.progress span');
