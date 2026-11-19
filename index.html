@@ -4,27 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="theme-color" content="#f4f3f1">
-  <meta name="description" content="Raio-X comercial da Imohills, preparado pela Multiplix.">
+  <meta name="theme-color" content="#191625">
+  <meta name="description" content="Raio-X comercial e de liderança da Imohills, preparado pela Multiplix para Marcelo Coimbra.">
   <title>Imohills · Raio-X Multiplix</title>
   <link rel="icon" href="assets/multiplix-symbol.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 9.5V20h13V9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5h18.4L12 4Zm0 6v4.2m0 2.6v.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3.5 9 4.8-9 4.8-9-4.8 9-4.8Zm-9 8.7 9 4.8 9-4.8M3 16.2 12 21l9-4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pillars" viewBox="0 0 24 24"><path d="M3 20h18M4 8.5h16L12 3.5 4 8.5Zm2 2.5v6.5m4-6.5v6.5m4-6.5v6.5m4-6.5v6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4.5 6.5h15v13h-15zM4.5 10.5h15M8.5 4v4m7-4v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6.5 10.5h11v9h-11zM8.8 10.5V8a3.2 3.2 0 0 1 6.4 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
 <div class="entry" id="entry">
   <div class="entry-inner">
-    <div class="entry-art"><div class="entry-brand"><img src="assets/multiplix-symbol.jpg" width="33" height="33" alt=""><span>Multiplix</span></div><div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="entry-art-copy"><span>Raio-X comercial</span><strong>Imohills<span>.</span></strong></div></div>
+    <div class="entry-art">
+      <div class="entry-brand"><img src="assets/multiplix-symbol.jpg" width="34" height="34" alt=""><span>Multiplix</span></div>
+      <div class="scan" aria-hidden="true"><i></i><i></i><i></i><span class="scan-line"></span></div>
+      <div class="entry-art-copy">
+        <span class="entry-kicker">Raio-X comercial e de liderança</span>
+        <strong>Imohills<span>.</span></strong>
+        <ul class="entry-contents" aria-label="O que tem dentro">
+          <li><b>3</b> gargalos que travam o caminho até 20 corretores</li>
+          <li><b>3</b> níveis: estratégico, tático e operacional</li>
+          <li><b>4</b> pilares para atrair, fazer performar e reter</li>
+        </ul>
+      </div>
+    </div>
     <div class="entry-form">
-      <p class="eyebrow">Preparado para Marcelo Coimbra</p>
-      <h1>Bem-vindo, Marcelo.</h1>
-      <p>Abra o diagnóstico da Imohills com o código enviado pelo Gabriel.</p>
-      <form id="access-form">
+      <p class="eyebrow"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Acesso reservado</p>
+      <h1>Marcelo, o seu Raio-X está pronto.</h1>
+      <p>Organizamos o que você contou no diagnóstico de 18/11 para você chegar à nossa próxima conversa com tudo à mão.</p>
+      <form id="access-form" novalidate>
         <label for="code">Código de acesso</label>
-        <div class="input-row"><input id="code" type="password" spellcheck="false" autocapitalize="off" autocomplete="off" required aria-describedby="entry-error"><button id="reveal" type="button" aria-pressed="false">Mostrar</button></div>
+        <div class="input-row"><input id="code" type="password" spellcheck="false" autocapitalize="off" autocomplete="off" required aria-describedby="code-help entry-error"><button id="reveal" type="button" aria-pressed="false">Mostrar</button></div>
+        <p id="code-help" class="help">Está na mensagem que o Gabriel te enviou.</p>
         <p id="entry-error" class="entry-error" role="alert"></p>
-        <button class="button primary" type="submit">Abrir meu Raio-X <span aria-hidden="true">↗</span></button>
+        <button class="button primary" id="submit" type="submit"><span>Abrir meu Raio-X</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       </form>
+      <p class="entry-time">Leitura de cerca de 6 minutos · funciona no celular</p>
       <noscript><p>Ative o JavaScript para abrir a apresentação.</p></noscript>
     </div>
   </div>
@@ -34,125 +62,207 @@
   <a class="skip" href="#main">Ir ao conteúdo</a>
   <header class="topbar">
     <div class="shell topbar-inner">
-      <a href="#inicio" class="brand"><img src="assets/multiplix-symbol.jpg" width="32" height="32" alt=""><span>Multiplix</span><span class="brand-divider"></span><span class="client-name">Imohills</span></a>
+      <a href="#inicio" class="brand"><img src="assets/multiplix-symbol.jpg" width="30" height="30" alt=""><span>Multiplix</span><span class="brand-divider"></span><span class="client-name">Imohills</span></a>
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#inicio">Visão geral</a><a href="#operacao">Gargalos</a><a href="#referencias">Insights</a><a href="#reuniao">Reunião</a>
+        <a href="#inicio">Visão geral</a><a href="#gargalos">Gargalos</a><a href="#niveis">3 níveis</a><a href="#pilares">Pilares</a><a href="#proximo">Próximo passo</a>
       </nav>
-      <button type="button" class="exit" id="exit" aria-label="Sair do Raio-X">Sair</button>
+      <button type="button" class="exit" id="exit">Sair</button>
     </div>
     <div class="progress" aria-hidden="true"><span></span></div>
   </header>
 
   <main id="main" class="shell">
+    <!-- VISÃO GERAL -->
     <section class="hero chapter" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Diagnóstico comercial · Nova Lima</p>
-        <h1 id="hero-title" tabindex="-1">Da entrada à<br>primeira <em>venda.</em></h1>
-        <p class="hero-lead">A Imohills quer chegar a 20 corretores. O gargalo é ajudar quem entra a avançar na captação de imóveis de terceiros e ganhar tração antes que a demora pela primeira venda pese na permanência.</p>
-        <a class="button primary" href="#operacao">Ver os gargalos <span aria-hidden="true">↗</span></a>
+        <p class="eyebrow">Raio-X · Imohills · Nova Lima</p>
+        <h1 id="hero-title" tabindex="-1">De 11 para 20 corretores <em>sem que tudo passe por você.</em></h1>
+        <p class="hero-lead">Marcelo, este é o resumo do que vimos juntos no diagnóstico. Para dobrar a equipe, a Imohills precisa de duas coisas ao mesmo tempo: <strong>um jeito de atrair as pessoas certas</strong> e <strong>uma liderança que faça quem entra vender e ficar</strong>.</p>
+        <a class="button primary" href="#gargalos"><span>Ver o diagnóstico</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="hero-visual">
-        <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="scan" aria-hidden="true"><i></i><i></i><i></i></div>
         <div class="hero-map">
-          <p class="eyebrow">Equipe comercial</p>
-          <div class="count"><div><strong>11</strong><span>na equipe</span></div><i aria-hidden="true"></i><div><strong>20</strong><span>na meta</span></div></div>
-          <p>Equipe em 18/11/2026 e meta de Marcelo.</p>
+          <p class="eyebrow">A sua meta</p>
+          <div class="count"><div><strong>11</strong><span>corretores hoje</span></div><i aria-hidden="true"></i><div><strong>20</strong><span>meta</span></div></div>
+          <p class="hero-gap"><b>+9 pessoas</b> que precisam ser atraídas, desenvolvidas e mantidas.</p>
         </div>
       </div>
-      <div class="hero-bottom">
-        <div><span>Ativo da Imohills</span><strong>Captação de terceiros e relacionamento local</strong></div>
-        <div><span>O caso que marcou a conversa</span><strong>Cerca de 11 meses até a primeira venda de um corretor hoje líder em vendas</strong></div>
-        <div><span>Indicador da casa</span><strong>VGC · Valor Geral de Comissão</strong></div>
+      <div class="hero-assets">
+        <p class="eyebrow">O que a Imohills já tem a favor</p>
+        <ul>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Captação de terceiros e relação local.</b> Um ativo que é difícil de copiar.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Conversas individuais já acontecem.</b> A base do acompanhamento existe.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Prova de que quem fica cresce.</b> O seu corretor que mais vende hoje começou do zero.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Um indicador da casa.</b> O VGC já mostra o resultado de cada um.</span></li>
+        </ul>
       </div>
     </section>
 
-    <section class="chapter section" id="operacao" aria-labelledby="operations-title">
+    <!-- GARGALOS (SPIN) -->
+    <section class="chapter section" id="gargalos" aria-labelledby="g-title">
       <div class="section-heading">
-        <div><p class="eyebrow">Gargalos observados</p><h2 id="operations-title">Onde a operação trava.</h2></div>
-        <p>Três pontos da conversa de 18/11/2026 explicam por que ampliar a equipe exige mexer também no acompanhamento de quem entra.</p>
-      </div>
-      <ol class="findings" aria-label="Gargalos">
-        <li class="finding">
-          <div class="finding-top"><span class="finding-index">Gargalo 01</span><span class="impact high">Impacto alto na meta</span></div>
-          <div class="finding-metric"><strong>~5 km</strong><span>raio de recrutamento</span></div>
-          <h3>Recrutamento com alcance restrito</h3>
-          <dl>
-            <div><dt>O que ouvimos</dt><dd>A busca por corretores fica num raio de cerca de 5 km. A proximidade ajuda a estar presente na operação e a criar relação com proprietários.</dd></div>
-            <div><dt>O que isso causa</dt><dd>Sobram poucos candidatos com esse perfil, e chegar aos 20 corretores fica mais lento.</dd></div>
-          </dl>
-          <small>Reunião · 58:38–1:00:38 e 1:11:38</small>
-        </li>
-        <li class="finding">
-          <div class="finding-top"><span class="finding-index">Gargalo 02</span><span class="impact high">Impacto alto na meta</span></div>
-          <div class="finding-metric"><strong>~11 meses</strong><span>até a 1ª venda do atual líder</span></div>
-          <h3>A primeira venda demora</h3>
-          <dl>
-            <div><dt>O que ouvimos</dt><dd>O corretor que mais vende hoje levou cerca de 11 meses para fechar a primeira venda. Marcelo quer acelerar a evolução de quem entra.</dd></div>
-            <div><dt>O que isso causa</dt><dd>Quem entra passa meses sem resultado, e a permanência na equipe fica em risco.</dd></div>
-          </dl>
-          <small>Reunião · 20:37, 25:37 e 44:37</small>
-        </li>
-        <li class="finding">
-          <div class="finding-top"><span class="finding-index">Gargalo 03</span><span class="impact mid">Impacto médio</span></div>
-          <div class="finding-metric"><strong>1:1</strong><span>acontecem, sem desdobramento claro</span></div>
-          <h3>Feedback difícil de sustentar</h3>
-          <dl>
-            <div><dt>O que ouvimos</dt><dd>As conversas individuais já acontecem, mas Marcelo relatou dificuldade em dar feedback. Atrasos e metas não atingidas foram os exemplos citados.</dd></div>
-            <div><dt>O que isso causa</dt><dd>Os ajustes esperados ficam sem acompanhamento, e o mesmo problema volta no encontro seguinte.</dd></div>
-          </dl>
-          <small>Reunião · 24:37–25:37 e 40:25–40:38</small>
-        </li>
-      </ol>
-      <div class="console">
-        <div class="console-head"><div><span class="eyebrow">Mapa interativo</span><h3>O que conferir na prática</h3></div><span class="example-label">Pontos para validar</span></div>
-        <div class="switch" id="path-tabs" role="tablist" aria-label="Frentes da operação">
-          <button type="button" role="tab" id="tab-novos" aria-controls="painel-novos" aria-selected="true" data-path="novos">Acompanhar corretores</button>
-          <button type="button" role="tab" id="tab-carteira" aria-controls="painel-carteira" aria-selected="false" tabindex="-1" data-path="carteira">Testar retomada de carteira</button>
-        </div>
-        <div id="painel-novos" class="path-panel" role="tabpanel" aria-labelledby="tab-novos" tabindex="0"></div>
-        <div id="painel-carteira" class="path-panel" role="tabpanel" aria-labelledby="tab-carteira" tabindex="0" hidden></div>
+        <div><p class="eyebrow">01 · Diagnóstico</p><h2 id="g-title">Os três gargalos no caminho até 20.</h2></div>
+        <p>Cada ponto parte do que você nos contou, mostra o que ele já custa hoje e o que tende a acontecer se continuar igual enquanto a equipe cresce.</p>
       </div>
 
-    </section>
-
-    <section class="chapter section" id="referencias" aria-labelledby="insights-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">Insights da call</p><h2 id="insights-title">O que medir antes da venda.</h2></div>
-        <p>O VGC mostra o resultado comercial. Ligações, retornos e visitas ajudam a enxergar o que aconteceu antes dele e dão base para a conversa com cada corretor.</p>
+      <div class="legend" aria-hidden="true">
+        <span><i class="dot d-said"></i>O que você contou</span>
+        <span><i class="dot d-now"></i>O que isso custa hoje</span>
+        <span><i class="dot d-future"></i>Se nada mudar</span>
       </div>
-      <ol class="insights" aria-label="Insights">
-        <li class="insight">
-          <span class="insight-num" aria-hidden="true">01</span>
-          <div><span class="insight-tag">Responde ao gargalo 02</span><h3>Medir comprometimento pela atividade</h3><p>Marcelo planejou levar a pergunta sobre comprometimento à próxima reunião e começar a medir em dezembro. Ligações, retornos, visitas e propostas apareceram como sinais que o gestor pode conferir antes da primeira venda.</p><small>Reunião · 1:02:25 e 1:04:38–1:05:38</small></div>
+
+      <ol class="gaps">
+        <li class="gap">
+          <header class="gap-head">
+            <span class="gap-num">01</span>
+            <div><h3>Recrutar com escassez</h3><p class="gap-metric"><b>~5 km</b> de raio para buscar corretores</p></div>
+            <span class="front f-com">Frente Comercial</span>
+          </header>
+          <div class="spin">
+            <div class="spin-step s-said"><p class="spin-label">O que você contou</p><p>Você busca corretores num raio de cerca de 5 km. Faz sentido: a operação depende de presença e de relação com proprietários da região.</p><small>Reunião · 58:38–1:00:38</small></div>
+            <div class="spin-step s-now"><p class="spin-label">O que isso custa hoje</p><p>Com poucos candidatos, a decisão vira “contratar ou não quem apareceu”, e não “escolher o melhor entre vários”. Cada vaga demora para ser preenchida.</p></div>
+            <div class="spin-step s-future"><p class="spin-label">Se nada mudar</p><p>Para abrir 9 vagas, a tentação é baixar a régua. Quem entra sem o perfil certo pesa na rampa e na rotina, e a meta de 20 passa a depender de sorte.</p></div>
+          </div>
+          <div class="principle"><p class="spin-label">Princípio que conversamos</p><blockquote>“Com escassez você contrata os menos piores. Com abundância você escolhe os melhores.”</blockquote><p>O perfil empreendedor é raro: na referência da Multiplix, cerca de 2 a cada 100 candidatos. Por isso recrutar é um funil, com muita gente na entrada.</p></div>
         </li>
-        <li class="insight">
-          <span class="insight-num" aria-hidden="true">02</span>
-          <div><span class="insight-tag">Responde ao gargalo 03</span><h3>Dar feedback sobre um caso concreto</h3><p>A proposta da call foi trabalhar comportamento, técnica e visão. Com o histórico de uma captação ou visita em mãos, o gestor aponta o ajuste esperado e confere o que mudou no próximo encontro.</p><small>Reunião · 38:25</small></div>
+
+        <li class="gap">
+          <header class="gap-head">
+            <span class="gap-num">02</span>
+            <div><h3>Uma rampa longa até a primeira venda</h3><p class="gap-metric"><b>~11 meses</b> até a 1ª venda do seu líder em vendas</p></div>
+            <span class="front f-both">Comercial + Liderança</span>
+          </header>
+          <div class="spin">
+            <div class="spin-step s-said"><p class="spin-label">O que você contou</p><p>O corretor que mais vende hoje levou cerca de 11 meses para fechar a primeira venda. Você quer acelerar a evolução de quem entra para que permaneça.</p><small>Reunião · 20:37, 25:37 e 44:37</small></div>
+            <div class="spin-step s-now"><p class="spin-label">O que isso custa hoje</p><p>São meses sem comissão. Fica quem aguenta, não necessariamente quem tem mais potencial. E o esforço de quem você contratou e treinou vai embora com quem sai.</p></div>
+            <div class="spin-step s-future"><p class="spin-label">Se nada mudar</p><p>Contratar 9 pessoas com a mesma rampa é ter várias pessoas ao mesmo tempo sem resultado. A equipe gira, e você recomeça o recrutamento em vez de crescer.</p></div>
+          </div>
+          <div class="principle"><p class="spin-label">Princípio que conversamos</p><blockquote>Remuneração atrai, mas não segura ninguém sozinha.</blockquote><p>Antes da primeira comissão, o que mantém um corretor é <b>visão de crescimento</b> e <b>reconhecimento</b> pelo que ele já faz: os pilares 2 e 3.</p></div>
         </li>
-        <li class="insight">
-          <span class="insight-num" aria-hidden="true">03</span>
-          <div><span class="insight-tag">Responde ao gargalo 01</span><h3>Testar o perfil junto com o raio</h3><p>A proximidade pesa numa operação de terceiros. A alternativa discutida foi avaliar também alinhamento e disponibilidade para a rotina, ao testar candidatos além do raio atual.</p><small>Reunião · 59:38–1:01:25</small></div>
+
+        <li class="gap">
+          <header class="gap-head">
+            <span class="gap-num">03</span>
+            <div><h3>Feedback que não vira ajuste</h3><p class="gap-metric"><b>1:1</b> acontecem, mas sem desdobramento claro</p></div>
+            <span class="front f-lid">Frente Liderança</span>
+          </header>
+          <div class="spin">
+            <div class="spin-step s-said"><p class="spin-label">O que você contou</p><p>Você já faz conversas individuais e tem apoio na retenção. Mesmo assim, disse com todas as letras: <q>Eu tenho muita dificuldade no feedback.</q> Atrasos e metas não atingidas foram os exemplos.</p><small>Reunião · 24:37–25:37 e 40:25–40:38</small></div>
+            <div class="spin-step s-now"><p class="spin-label">O que isso custa hoje</p><p>Sem um combinado claro e uma conferência depois, o mesmo assunto volta no encontro seguinte. Quem performa vê que atraso e meta perdida não mudam nada.</p></div>
+            <div class="spin-step s-future"><p class="spin-label">Se nada mudar</p><p>Com 20 corretores, não dá para fazer 1:1 com todos. Sem líderes formados abaixo de você e sem um rito de feedback, a gestão passa a depender só de você.</p></div>
+          </div>
+          <div class="principle"><p class="spin-label">Princípio que conversamos</p><blockquote>“Não é porque a pessoa é boa de vendas que é boa de liderança.”</blockquote><p>Para escalar, você precisa ser um líder cada vez melhor e formar outros líderes tão bons quanto você.</p></div>
         </li>
       </ol>
     </section>
 
-    <section class="chapter meeting" id="reuniao" aria-labelledby="meeting-title">
+    <!-- 3 NÍVEIS -->
+    <section class="chapter section" id="niveis" aria-labelledby="n-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">02 · Desafios e oportunidades</p><h2 id="n-title">O mesmo problema, em três níveis.</h2></div>
+        <p>Os gargalos aparecem de um jeito na decisão do dono, de outro na rotina de gestão e de outro no dia a dia do corretor. Filtre pelas duas frentes em que a Multiplix atua.</p>
+      </div>
+
+      <div class="filter" role="group" aria-label="Filtrar por frente">
+        <button type="button" data-filter="all" aria-pressed="true">Tudo</button>
+        <button type="button" data-filter="com" aria-pressed="false">Comercial</button>
+        <button type="button" data-filter="lid" aria-pressed="false">Liderança</button>
+      </div>
+
+      <div class="levels">
+        <article class="level">
+          <header><span class="level-tag">Estratégico</span><h3>A sua decisão como dono</h3><p>Para onde a Imohills vai e o que ela oferece a quem entra.</p></header>
+          <div class="level-row" data-front="com"><span class="front f-com">Comercial</span><p class="lr-ch"><b>Desafio:</b> a proposta ao corretor se apoia na comissão, que todo mundo oferece.</p><p class="lr-op"><b>Oportunidade:</b> montar uma proposta com os 4 pilares (remuneração, crescimento, reconhecimento e empreender) que tire gente boa de outras imobiliárias.</p></div>
+          <div class="level-row" data-front="lid"><span class="front f-lid">Liderança</span><p class="lr-ch"><b>Desafio:</b> crescer de 11 para 20 com a gestão concentrada em você.</p><p class="lr-op"><b>Oportunidade:</b> um plano de 1, 3 e 5 anos escrito, que serve de bússola para o time e de argumento para quem você quer atrair.</p></div>
+        </article>
+        <article class="level">
+          <header><span class="level-tag">Tático</span><h3>A rotina de gestão</h3><p>Como a Imohills recruta, acompanha e promove.</p></header>
+          <div class="level-row" data-front="com"><span class="front f-com">Comercial</span><p class="lr-ch"><b>Desafio:</b> o recrutamento depende do raio e de quem aparece.</p><p class="lr-op"><b>Oportunidade:</b> um processo seletivo em funil, com etapa em grupo, que avalie perfil e disponibilidade além da distância.</p></div>
+          <div class="level-row" data-front="lid"><span class="front f-lid">Liderança</span><p class="lr-ch"><b>Desafio:</b> não há um caminho visível entre entrar e liderar.</p><p class="lr-op"><b>Oportunidade:</b> um plano de carreira com níveis de corretor e de liderança, metas claras e competição por temporadas, sem transformar o melhor vendedor em gerente por padrão.</p></div>
+        </article>
+        <article class="level">
+          <header><span class="level-tag">Operacional</span><h3>O dia a dia do corretor</h3><p>O que acontece entre a entrada e a primeira venda.</p></header>
+          <div class="level-row" data-front="com"><span class="front f-com">Comercial</span><p class="lr-ch"><b>Desafio:</b> o VGC mostra o resultado, mas só no fim.</p><p class="lr-op"><b>Oportunidade:</b> acompanhar ligações, retornos, visitas e propostas, como você já planejou começar em dezembro, para enxergar quem avança antes da venda.</p></div>
+          <div class="level-row" data-front="lid"><span class="front f-lid">Liderança</span><p class="lr-ch"><b>Desafio:</b> 1:1 que não terminam em um ajuste combinado.</p><p class="lr-op"><b>Oportunidade:</b> um feedback sobre um caso real (uma captação ou visita), com um próximo passo conferido no encontro seguinte.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PILARES -->
+    <section class="chapter section" id="pilares" aria-labelledby="p-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">03 · Princípios</p><h2 id="p-title">Os pilares que conversamos.</h2></div>
+        <p>A maioria das imobiliárias só aplica o primeiro. Para cada pilar, o que ele resolve e como ele se conecta com a Imohills.</p>
+      </div>
+
+      <ol class="pillars4">
+        <li class="p4"><div class="p4-top"><span class="p4-n">1</span><span class="p4-role">Atrair</span></div><h3>Remuneração</h3><p>Acima da média do mercado. É o mínimo, não o diferencial: todo mundo tem.</p><p class="p4-link"><b>Na Imohills:</b> o pilar que já existe. Sozinho, ele não segura ninguém por 11 meses.</p></li>
+        <li class="p4"><div class="p4-top"><span class="p4-n">2</span><span class="p4-role">Atrair</span></div><h3>Crescimento</h3><p>Visão de futuro: onde a empresa e o corretor querem estar em 1, 3 e 5 anos.</p><p class="p4-link"><b>Na Imohills:</b> a meta de chegar a 20 vira história para contar a quem você quer recrutar.</p></li>
+        <li class="p4"><div class="p4-top"><span class="p4-n">3</span><span class="p4-role">Performar</span></div><h3>Reconhecimento</h3><p>Meritocracia e salário emocional: plano de carreira, competição por times e temporadas.</p><p class="p4-link"><b>Na Imohills:</b> reconhecer a primeira captação e a primeira visita, antes da primeira venda.</p></li>
+        <li class="p4"><div class="p4-top"><span class="p4-n">4</span><span class="p4-role">Reter</span></div><h3>Empreender</h3><p>Ter parte do negócio: o melhor profissional empreende dentro da empresa, não contra ela.</p><p class="p4-link"><b>Na Imohills:</b> o caminho para que um corretor como o seu líder em vendas não vire concorrente.</p></li>
+      </ol>
+      <p class="ruler"><b>Régua financeira:</b> quando o corretor bate o “bom” para ele, para de performar. É o que vende dois imóveis no começo do mês e some. Os pilares 2, 3 e 4 existem para mover essa régua.</p>
+
+      <div class="duo">
+        <article class="duo-card">
+          <span class="front f-com">Comercial</span>
+          <h3>Máquina de recrutamento</h3>
+          <p>Contratar é a atividade mais importante, porque a venda é o coração da empresa. Por isso o processo seletivo funciona como funil: muita gente na entrada e uma primeira etapa em grupo conduzida pelo dono.</p>
+          <p class="duo-link"><b>Para a Imohills:</b> manter o critério local e testar candidatos fora do raio por perfil e disponibilidade.</p>
+        </article>
+        <article class="duo-card">
+          <span class="front f-lid">Liderança</span>
+          <h3>Formação de líderes</h3>
+          <p>Vender e liderar são habilidades diferentes. O erro mais comum é promover o melhor vendedor a gerente: perde-se um ótimo vendedor e ganha-se um gerente que ainda não foi preparado.</p>
+          <p class="duo-link"><b>Para a Imohills:</b> formar a camada de líderes antes de chegar a 20, para que a gestão não dependa só de você.</p>
+        </article>
+      </div>
+
+      <div class="extra">
+        <div class="extra-head"><p class="eyebrow">Além do roteiro</p><h3>O que construímos juntos na conversa</h3></div>
+        <ol>
+          <li><span>A</span><div><h4>Feedback em três eixos</h4><p>Separar <b>comportamento</b>, <b>técnica</b> e <b>visão</b>. Com um caso concreto em mãos, fica mais fácil apontar o ajuste esperado e conferir se ele aconteceu.</p><small>Reunião · 38:25</small></div></li>
+          <li><span>B</span><div><h4>Medir comprometimento pela atividade</h4><p>Você planejou levar a pergunta sobre comprometimento à próxima reunião com o time e começar a medir em dezembro. Ligações, retornos, visitas e propostas mostram quem está se mexendo antes da venda.</p><small>Reunião · 1:02:25 e 1:04:38–1:05:38</small></div></li>
+          <li><span>C</span><div><h4>Perfil junto com o raio</h4><p>A proximidade pesa numa operação de terceiros. A alternativa foi avaliar também alinhamento e disponibilidade para a rotina ao testar candidatos além dos 5 km.</p><small>Reunião · 59:38–1:01:25</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRÓXIMO PASSO -->
+    <section class="chapter meeting" id="proximo" aria-labelledby="m-title">
       <div class="meeting-layout">
-        <div><p class="eyebrow">Próxima conversa · com Milton Bars</p><h2 id="meeting-title">Um caso real para validar a abordagem.</h2><p>A proposta para a próxima conversa é abrir, com Milton, uma oportunidade retomada na Move.se. A Imohills trabalha sobretudo com imóveis de terceiros. Vamos avaliar o que é aplicável à captação de proprietários ou ao acompanhamento de compradores.</p></div>
-        <ol class="agenda"><li><span>01</span><div><strong>Onde parou</strong><p>Último contato e momento em que ficou sem próxima ação.</p></div></li><li><span>02</span><div><strong>Quem retomou</strong><p>Responsável, prazo e próxima etapa.</p></div></li><li><span>03</span><div><strong>O que aconteceu depois</strong><p>Resposta registrada e adaptação ao modelo da Imohills.</p></div></li></ol>
+        <div>
+          <p class="eyebrow"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg> Próxima conversa · com Milton Bars</p>
+          <h2 id="m-title">Do diagnóstico ao plano.</h2>
+          <p>Na próxima conversa, vamos mostrar como as duas frentes da Multiplix, <b>Comercial</b> e <b>Liderança</b>, atacam cada um dos três gargalos na realidade da Imohills.</p>
+        </div>
+        <ol class="agenda">
+          <li><span>01</span><div><strong>Recrutamento</strong><p>Como sair da escassez sem abrir mão do critério local.</p></div></li>
+          <li><span>02</span><div><strong>Rampa dos novos corretores</strong><p>Quais marcos acompanhar antes da primeira venda.</p></div></li>
+          <li><span>03</span><div><strong>Liderança e feedback</strong><p>Como formar quem lidera abaixo de você até chegar a 20.</p></div></li>
+        </ol>
       </div>
       <div class="choice">
-        <div><h3>Qual carteira você quer olhar primeiro?</h3><p>Escolha uma frente e copie a resposta para enviar ao Gabriel.</p></div>
-        <fieldset><legend class="sr">Escolha o tema da reunião</legend><label><input type="radio" name="focus" value="compradores"><span>Compradores</span></label><label><input type="radio" name="focus" value="proprietários" checked><span>Proprietários</span></label></fieldset>
-        <button type="button" class="button light" id="copy">Copiar minha escolha</button>
+        <div><h3>Por onde você quer começar?</h3><p>Escolha um tema e mande para o Gabriel. Assim a conversa já começa pelo que mais pesa para você.</p></div>
+        <fieldset><legend class="sr">Tema para começar</legend>
+          <label><input type="radio" name="focus" value="recrutamento" checked><span>Recrutamento</span></label>
+          <label><input type="radio" name="focus" value="rampa dos novos corretores"><span>Rampa dos novos</span></label>
+          <label><input type="radio" name="focus" value="liderança e feedback"><span>Liderança e feedback</span></label>
+        </fieldset>
+        <button type="button" class="button light" id="copy">Copiar mensagem para o Gabriel</button>
         <p id="copied" class="feedback" role="status"></p>
         <textarea id="copy-fallback" aria-label="Texto para copiar" rows="3" readonly hidden></textarea>
       </div>
     </section>
   </main>
-  <footer class="footer shell"><img src="assets/multiplix-wordmark.jpg" alt="Multiplix" width="54" height="54"><span>Preparado para Marcelo Coimbra · Imohills</span><a href="#inicio">Voltar ao início ↑</a></footer>
+  <footer class="footer shell"><img src="assets/multiplix-wordmark.jpg" alt="Multiplix" width="48" height="48"><span>Preparado para Marcelo Coimbra · Imohills · diagnóstico de 18/11/2026</span><a href="#inicio">Voltar ao início ↑</a></footer>
   <nav class="dock" aria-label="Navegação móvel">
-    <a href="#inicio"><span aria-hidden="true">⌂</span>Visão geral</a><a href="#operacao"><span aria-hidden="true">◈</span>Gargalos</a><a href="#referencias"><span aria-hidden="true">▷</span>Insights</a><a href="#reuniao"><span aria-hidden="true">◷</span>Reunião</a>
+    <a href="#inicio"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Início</a>
+    <a href="#gargalos"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Gargalos</a>
+    <a href="#niveis"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg>Níveis</a>
+    <a href="#pilares"><svg class="ic" aria-hidden="true"><use href="#i-pillars"/></svg>Pilares</a>
+    <a href="#proximo"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Próximo</a>
   </nav>
 </div>
 </body>

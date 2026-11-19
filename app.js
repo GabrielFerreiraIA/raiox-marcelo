@@ -42,7 +42,10 @@ document.querySelector('#access-form').addEventListener('submit', (event) => {
   code.removeAttribute('aria-invalid');
   code.value = '';
   setSession(true);
-  unlock(true);
+  const submit = document.querySelector('#submit');
+  submit.classList.add('loading');
+  submit.disabled = true;
+  setTimeout(() => { submit.classList.remove('loading'); submit.disabled = false; unlock(true); }, 420);
 });
 
 code.addEventListener('input', () => {
@@ -59,8 +62,7 @@ reveal.addEventListener('click', () => {
 
 document.querySelector('#exit').addEventListener('click', () => {
   setSession(false);
-  app.querySelectorAll("video").forEach((video) => video.pause());
-  app.hidden = true;
+    app.hidden = true;
   entry.hidden = false;
   if (code.type === 'text') reveal.click();
   history.replaceState(null, '', location.pathname + location.search);
@@ -68,74 +70,19 @@ document.querySelector('#exit').addEventListener('click', () => {
   code.focus();
 });
 
-const flows = {
-  carteira: {
-    title: 'Recuperação de oportunidades',
-    stages: [
-      ['Identificar', 'Oportunidade sem próxima ação', 'Na demonstração, procure um registro que tenha ficado sem ação futura. Confira se a Imohills encontra casos semelhantes na carteira que escolher.', 'Quantos registros podem ser retomados e quando foi o último contato?'],
-      ['Atribuir', 'Responsável e prazo', 'Combine quem entra em contato, em qual prazo e o que precisa ficar registrado depois da tentativa.', 'Quem acompanha os retornos feitos e os que continuam pendentes?'],
-      ['Revisar', 'Retorno e visita', 'Na revisão, confira quais conversas voltaram a andar e quais geraram uma visita ou uma nova ação.', 'Quantas retomadas viraram avanço e em que etapa?']
-    ]
-  },
-  novos: {
-    title: 'Evolução dos novos corretores',
-    stages: [
-      ['Captar', 'Primeira captação', 'Registre a entrada e o primeiro avanço com um proprietário. Use a atividade para localizar quem precisa de apoio.', 'Quanto tempo se passa até a primeira captação?'],
-      ['Visitar', 'Primeira visita', 'Confira se as conversas geraram visitas. A etapa indica onde pode fazer sentido revisar a abordagem ou a preparação.', 'Onde a atividade é registrada e quem revisa?'],
-      ['Fechar', 'Primeira venda', 'Compare o tempo até a primeira venda com a atividade registrada antes dela. O corretor citado levou cerca de 11 meses.', 'Qual é o tempo típico até a primeira venda por turma de entrada?']
-    ]
-  }
-};
-const selectedStage = { carteira: 0, novos: 0 };
-const tabs = [...document.querySelectorAll('[data-path]')];
-
-function renderFlow(path) {
-  const panel = document.querySelector('#painel-' + path);
-  const flow = flows[path];
-  panel.innerHTML = '<ol class="rail" aria-label="Etapas de ' + flow.title + '">' +
-    flow.stages.map(([label], index) => '<li><button type="button" data-index="' + index + '" aria-pressed="false"><span aria-hidden="true">0' + (index + 1) + '</span>' + label + '</button></li>').join('') +
-    '</ol><div class="step-detail" aria-live="polite"><div><p class="eyebrow">Na prática</p><h4></h4><p class="step-description"></p></div><div class="step-question"><p class="eyebrow">O que conferir</p><p class="step-check"></p></div></div>';
-  const buttons = [...panel.querySelectorAll('[data-index]')];
-
-  function show(index) {
-    selectedStage[path] = index;
-    const [, title, description, question] = flow.stages[index];
-    buttons.forEach((button, position) => button.setAttribute('aria-pressed', String(position === index)));
-    panel.querySelector('h4').textContent = title;
-    panel.querySelector('.step-description').textContent = description;
-    panel.querySelector('.step-check').textContent = question;
-  }
-
-  for (const button of buttons) button.addEventListener('click', () => show(Number(button.dataset.index)));
-  show(selectedStage[path]);
-}
-
-function selectPath(tab, focus) {
-  for (const item of tabs) {
-    const active = item === tab;
-    item.setAttribute('aria-selected', String(active));
-    item.tabIndex = active ? 0 : -1;
-    document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
-  }
-  if (focus) tab.focus();
-}
-
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => selectPath(tab, false));
-  tab.addEventListener('keydown', (event) => {
-    const targets = { ArrowLeft: (index + tabs.length - 1) % tabs.length, ArrowRight: (index + 1) % tabs.length, Home: 0, End: tabs.length - 1 };
-    if (!Object.hasOwn(targets, event.key)) return;
-    event.preventDefault();
-    selectPath(tabs[targets[event.key]], true);
-  });
-});
-Object.keys(flows).forEach(renderFlow);
+const filterButtons = [...document.querySelectorAll('[data-filter]')];
+const levelRows = [...document.querySelectorAll('.level-row')];
+filterButtons.forEach((button) => button.addEventListener('click', () => {
+  const value = button.dataset.filter;
+  filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+  levelRows.forEach((row) => row.classList.toggle('dim', value !== 'all' && row.dataset.front !== value));
+}));
 
 const feedback = document.querySelector('#copied');
 const fallback = document.querySelector('#copy-fallback');
 document.querySelector('#copy').addEventListener('click', async () => {
   const selected = document.querySelector('input[name="focus"]:checked').value;
-  const message = 'Gabriel, para a conversa com o Milton eu prefiro começar pela carteira de ' + selected + ' da Imohills.';
+  const message = 'Gabriel, li o Raio-X da Imohills. Na conversa com o Milton quero começar por: ' + selected + '.';
   try {
     await navigator.clipboard.writeText(message);
     fallback.hidden = true;
@@ -175,3 +122,18 @@ function requestReadingUpdate() {
 window.addEventListener('scroll', requestReadingUpdate, { passive: true });
 window.addEventListener('resize', requestReadingUpdate);
 if (sessionGranted()) unlock(false);
+
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('js');
+  const revealItems = document.querySelectorAll('.gap,.level,.p4,.duo-card,.extra li,.agenda li');
+  const observer = new IntersectionObserver((entries) => {
+    for (const item of entries) {
+      if (item.isIntersecting) { item.target.classList.add('in'); observer.unobserve(item.target); }
+    }
+  }, { rootMargin: '0px 0px -8% 0px' });
+  revealItems.forEach((item, index) => {
+    item.classList.add('reveal');
+    item.style.transitionDelay = (index % 4) * 40 + 'ms';
+    observer.observe(item);
+  });
+}

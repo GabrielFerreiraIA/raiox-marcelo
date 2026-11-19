@@ -14,5 +14,6 @@ Na Vercel, use a raiz desta pasta, preset **Other**, sem instalação ou build, 
 
 ## Conteúdo
 
-- Fonte: diagnóstico com Marcelo Coimbra, 18/11/2026. As referências de tempo no Raio-X remetem à reunião.
-- O mapa interativo reúne os pontos a verificar com dados da operação. A retomada de carteira é uma proposta de demonstração para a próxima conversa.
+- Leitor: Marcelo Coimbra (Imohills). Fonte dos fatos: diagnóstico de 18/11/2026; os tempos citados remetem à reunião.
+- Estrutura: visão geral → 3 gargalos em formato SPIN (o que ele contou, custo atual, risco futuro) → desafios e oportunidades em 3 níveis (estratégico, tático, operacional) por frente (Comercial e Liderança) → 4 pilares, máquina de recrutamento e formação de líderes (Script de Bolso Multiplix) → geração de valor fora do roteiro → próximo passo.
+- Sem preço, proposta ou depoimentos de terceiros.
