@@ -36,7 +36,7 @@
     <div class="shell topbar-inner">
       <a href="#inicio" class="brand"><img src="assets/multiplix-symbol.jpg" width="32" height="32" alt=""><span>Multiplix</span><span class="brand-divider"></span><span class="client-name">Imohills</span></a>
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#inicio">Visão geral</a><a href="#operacao">Operação</a><a href="#referencias">Referências</a><a href="#reuniao">Reunião</a>
+        <a href="#inicio">Visão geral</a><a href="#operacao">Gargalos</a><a href="#referencias">Insights</a><a href="#reuniao">Reunião</a>
       </nav>
       <button type="button" class="exit" id="exit" aria-label="Sair do Raio-X">Sair</button>
     </div>
@@ -48,15 +48,15 @@
       <div class="hero-copy">
         <p class="eyebrow">Diagnóstico comercial · Nova Lima</p>
         <h1 id="hero-title" tabindex="-1">Da entrada à<br>primeira <em>venda.</em></h1>
-        <p class="hero-lead">Um Raio-X da Imohills para acompanhar corretores mais cedo e descobrir quais oportunidades ainda podem voltar à carteira.</p>
-        <a class="button primary" href="#operacao">Explorar a operação <span aria-hidden="true">↗</span></a>
+        <p class="hero-lead">A Imohills quer chegar a 20 corretores. O gargalo é ajudar quem entra a avançar na captação de imóveis de terceiros e ganhar tração antes que a demora pela primeira venda pese na permanência.</p>
+        <a class="button primary" href="#operacao">Ver os gargalos <span aria-hidden="true">↗</span></a>
       </div>
       <div class="hero-visual">
         <div class="arch" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="hero-map">
           <p class="eyebrow">Equipe comercial</p>
           <div class="count"><div><strong>11</strong><span>na equipe</span></div><i aria-hidden="true"></i><div><strong>20</strong><span>na meta</span></div></div>
-          <p>Equipe e meta citadas no diagnóstico.</p>
+          <p>Equipe em 18/11/2026 e meta de Marcelo.</p>
         </div>
       </div>
       <div class="hero-bottom">
@@ -68,57 +68,46 @@
 
     <section class="chapter section" id="operacao" aria-labelledby="operations-title">
       <div class="section-heading">
-        <div><p class="eyebrow">Operação</p><h2 id="operations-title">Onde agir antes do fechamento.</h2></div>
-        <p>A sua operação se apoia na captação de imóveis de terceiros. Acompanhar o que acontece entre o primeiro contato e a venda pode indicar onde uma intervenção do gestor faz diferença.</p>
+        <div><p class="eyebrow">Gargalos observados</p><h2 id="operations-title">Onde a operação trava.</h2></div>
+        <p>Três pontos da conversa de 18/11/2026 explicam por que ampliar a equipe exige mexer também no acompanhamento de quem entra.</p>
+      </div>
+      <div class="pillars diagnosis">
+        <article><h3>Recrutamento com alcance restrito</h3><p>Marcelo concentra a busca em um raio de cerca de 5 km. A proximidade ajuda na presença na operação e na construção de relacionamento com proprietários. Encontrar gente com esse perfil já dificulta chegar aos 20 corretores.</p><small>Reunião · 58:38–1:00:38 e 1:11:38</small></article>
+        <article><h3>Primeira venda pode demorar</h3><p>O corretor que mais vende hoje levou cerca de 11 meses para fechar a primeira venda. Marcelo viu comprometimento nos encontros individuais e hoje quer acelerar a evolução dos novos para que permaneçam.</p><small>Reunião · 20:37, 25:37 e 44:37</small></article>
+        <article><h3>Feedback difícil de sustentar</h3><p>Marcelo já faz conversas individuais e tem apoio na retenção. Ainda assim, relatou dificuldade de dar feedback. Na call, atrasos e metas não atingidas apareceram como exemplos de situações sem desdobramento claro.</p><small>Reunião · 24:37–25:37 e 40:25–40:38</small></article>
       </div>
       <div class="console">
-        <div class="console-head"><div><span class="eyebrow">Mapa interativo</span><h3>Da atividade ao próximo passo</h3></div><span class="example-label">Modelo para conversar</span></div>
+        <div class="console-head"><div><span class="eyebrow">Mapa interativo</span><h3>O que conferir na prática</h3></div><span class="example-label">Pontos para validar</span></div>
         <div class="switch" id="path-tabs" role="tablist" aria-label="Frentes da operação">
-          <button type="button" role="tab" id="tab-carteira" aria-controls="painel-carteira" aria-selected="true" data-path="carteira">Recuperar carteira</button>
-          <button type="button" role="tab" id="tab-novos" aria-controls="painel-novos" aria-selected="false" tabindex="-1" data-path="novos">Acompanhar corretores</button>
+          <button type="button" role="tab" id="tab-novos" aria-controls="painel-novos" aria-selected="true" data-path="novos">Acompanhar corretores</button>
+          <button type="button" role="tab" id="tab-carteira" aria-controls="painel-carteira" aria-selected="false" tabindex="-1" data-path="carteira">Testar retomada de carteira</button>
         </div>
-        <div id="painel-carteira" class="path-panel" role="tabpanel" aria-labelledby="tab-carteira" tabindex="0"></div>
-        <div id="painel-novos" class="path-panel" role="tabpanel" aria-labelledby="tab-novos" tabindex="0" hidden></div>
+        <div id="painel-novos" class="path-panel" role="tabpanel" aria-labelledby="tab-novos" tabindex="0"></div>
+        <div id="painel-carteira" class="path-panel" role="tabpanel" aria-labelledby="tab-carteira" tabindex="0" hidden></div>
       </div>
 
-      <div class="pillars">
-        <article><span class="pillar-mark" aria-hidden="true">◎</span><h3>Manter o filtro local</h3><p>Conservar proximidade e rede na região como critérios de seleção. A discussão sobre volume de candidatos fica mais útil quando acompanhada de aderência, aceite e permanência.</p><small>A validar · Como vocês verificam a rede local hoje?</small></article>
-        <article><span class="pillar-mark" aria-hidden="true">◈</span><h3>Medir o que o corretor faz</h3><p>Ligações, captações e visitas mostram qual atividade aconteceu. O gestor consegue conversar sobre uma etapa concreta mesmo quando a primeira venda ainda está longe.</p><small>A validar · Quais atividades já ficam registradas?</small></article>
-        <article><span class="pillar-mark" aria-hidden="true">≋</span><h3>Fechar o ciclo de feedback</h3><p>Uma revisão curta pode ligar cada caso a um responsável, uma próxima ação e um prazo. A rotina pode começar com os corretores que já recebem acompanhamento.</p><small>A validar · Quem pode conduzir essa revisão?</small></article>
-      </div>
-      <blockquote class="client-quote"><p>“Eu tenho muita dificuldade no feedback.”</p><cite>Marcelo Coimbra · diagnóstico de 18/11/2026, 24:37</cite></blockquote>
     </section>
 
-    <section class="chapter section" id="referencias" aria-labelledby="proof-title">
+    <section class="chapter section" id="referencias" aria-labelledby="insights-title">
       <div class="section-heading">
-        <div><p class="eyebrow">Referências</p><h2 id="proof-title">Experiência de quem opera.</h2></div>
-        <p>Um vídeo sobre gestão imobiliária e dois relatos de empresários do setor. Use-os para comparar o que vale examinar na Imohills.</p>
+        <div><p class="eyebrow">Insights da call</p><h2 id="insights-title">O que medir antes da venda.</h2></div>
+        <p>O VGC mostra o resultado comercial. Ligações, retornos e visitas ajudam a enxergar o que aconteceu antes dele e dão base para a conversa com cada corretor.</p>
       </div>
-      <div class="proof-grid">
-        <article class="video-card">
-          <div class="video-poster" id="video-poster">
-            <div class="video-art" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="video-copy"><p class="eyebrow">Vídeo · Gestão imobiliária</p><h3>Maike Terres</h3><p>Fundador da Move.se</p><button type="button" class="play" id="play" aria-label="Reproduzir vídeo de Maike Terres"><span aria-hidden="true">▶</span> Reproduzir</button></div>
-          </div>
-          <div class="player" id="player" hidden></div>
-          <div class="video-footer"><span>Conversa pública sobre gestão no setor</span><a href="https://www.youtube.com/watch?v=1p6KDrkALcE" target="_blank" rel="noopener">Abrir no YouTube ↗</a></div>
-        </article>
-        <div class="proof-quotes">
-          <figure><blockquote>“nunca tivemos tantos conhecimentos a serem aplicados assim.”</blockquote><figcaption><strong>Davidson Lucas</strong><span>Relato sobre aplicação na imobiliária</span></figcaption></figure>
-          <figure><blockquote>“fizemos 180 vendas em Maio, alcançando a marca de 39 Milhões em VGV em um único mês”</blockquote><figcaption><strong>João Pedro · TRIP Imóveis</strong><span>Resultado relatado sobre a própria operação, em valor geral de vendas.</span></figcaption></figure>
-        </div>
+      <div class="pillars diagnosis">
+        <article><h3>Medir comprometimento pela atividade</h3><p>Marcelo planejou levar a pergunta sobre comprometimento à próxima reunião e começar a medir em dezembro. A conversa citou ligações, retornos, visitas e propostas como sinais que o gestor pode conferir.</p><small>Reunião · 1:02:25 e 1:04:38–1:05:38</small></article>
+        <article><h3>Dar feedback sobre um caso concreto</h3><p>A proposta da call foi trabalhar comportamento, técnica e visão. Com o histórico de uma captação ou visita em mãos, o gestor consegue apontar o ajuste esperado e conferir o que mudou no próximo encontro.</p><small>Reunião · 38:25</small></article>
+        <article><h3>Testar o perfil junto com o raio</h3><p>Marcelo explicou por que proximidade pesa numa operação de terceiros. A alternativa discutida foi avaliar também alinhamento e disponibilidade para participar da rotina ao testar candidatos além do raio atual.</p><small>Reunião · 59:38–1:01:25</small></article>
       </div>
-      <p class="source">Depoimentos escritos · Apresentação institucional Multiplix 2026, páginas 7 e 8.</p>
     </section>
 
     <section class="chapter meeting" id="reuniao" aria-labelledby="meeting-title">
       <div class="meeting-layout">
-        <div><p class="eyebrow">Próxima conversa · com Milton Bars</p><h2 id="meeting-title">O que a Move.se pode mostrar, ao vivo.</h2><p>Vamos abrir o histórico de uma oportunidade retomada e discutir como a rotina pode se adaptar à captação de proprietários ou à carteira de compradores da Imohills.</p></div>
+        <div><p class="eyebrow">Próxima conversa · com Milton Bars</p><h2 id="meeting-title">Um caso real para validar a abordagem.</h2><p>A proposta para a próxima conversa é abrir, com Milton, uma oportunidade retomada na Move.se. A Imohills trabalha sobretudo com imóveis de terceiros. Vamos avaliar o que é aplicável à captação de proprietários ou ao acompanhamento de compradores.</p></div>
         <ol class="agenda"><li><span>01</span><div><strong>Onde parou</strong><p>Último contato e momento em que ficou sem próxima ação.</p></div></li><li><span>02</span><div><strong>Quem retomou</strong><p>Responsável, prazo e próxima etapa.</p></div></li><li><span>03</span><div><strong>O que aconteceu depois</strong><p>Resposta registrada e adaptação ao modelo da Imohills.</p></div></li></ol>
       </div>
       <div class="choice">
         <div><h3>Qual carteira você quer olhar primeiro?</h3><p>Escolha uma frente e copie a resposta para enviar ao Gabriel.</p></div>
-        <fieldset><legend class="sr">Escolha o tema da reunião</legend><label><input type="radio" name="focus" value="compradores" checked><span>Compradores</span></label><label><input type="radio" name="focus" value="proprietários"><span>Proprietários</span></label></fieldset>
+        <fieldset><legend class="sr">Escolha o tema da reunião</legend><label><input type="radio" name="focus" value="compradores"><span>Compradores</span></label><label><input type="radio" name="focus" value="proprietários" checked><span>Proprietários</span></label></fieldset>
         <button type="button" class="button light" id="copy">Copiar minha escolha</button>
         <p id="copied" class="feedback" role="status"></p>
         <textarea id="copy-fallback" aria-label="Texto para copiar" rows="3" readonly hidden></textarea>
@@ -127,7 +116,7 @@
   </main>
   <footer class="footer shell"><img src="assets/multiplix-wordmark.jpg" alt="Multiplix" width="54" height="54"><span>Preparado para Marcelo Coimbra · Imohills</span><a href="#inicio">Voltar ao início ↑</a></footer>
   <nav class="dock" aria-label="Navegação móvel">
-    <a href="#inicio"><span aria-hidden="true">⌂</span>Visão geral</a><a href="#operacao"><span aria-hidden="true">◈</span>Operação</a><a href="#referencias"><span aria-hidden="true">▷</span>Referências</a><a href="#reuniao"><span aria-hidden="true">◷</span>Reunião</a>
+    <a href="#inicio"><span aria-hidden="true">⌂</span>Visão geral</a><a href="#operacao"><span aria-hidden="true">◈</span>Gargalos</a><a href="#referencias"><span aria-hidden="true">▷</span>Insights</a><a href="#reuniao"><span aria-hidden="true">◷</span>Reunião</a>
   </nav>
 </div>
 </body>

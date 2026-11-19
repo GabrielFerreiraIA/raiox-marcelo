@@ -59,7 +59,7 @@ reveal.addEventListener('click', () => {
 
 document.querySelector('#exit').addEventListener('click', () => {
   setSession(false);
-  pauseVideo();
+  app.querySelectorAll("video").forEach((video) => video.pause());
   app.hidden = true;
   entry.hidden = false;
   if (code.type === 'text') reveal.click();
@@ -72,7 +72,7 @@ const flows = {
   carteira: {
     title: 'Recuperação de oportunidades',
     stages: [
-      ['Identificar', 'Oportunidade sem próxima ação', 'Comece pela carteira de compradores ou de proprietários e localize os registros que ficaram sem uma ação futura.', 'Quantos registros podem ser retomados e quando foi o último contato?'],
+      ['Identificar', 'Oportunidade sem próxima ação', 'Na demonstração, procure um registro que tenha ficado sem ação futura. Confira se a Imohills encontra casos semelhantes na carteira que escolher.', 'Quantos registros podem ser retomados e quando foi o último contato?'],
       ['Atribuir', 'Responsável e prazo', 'Combine quem entra em contato, em qual prazo e o que precisa ficar registrado depois da tentativa.', 'Quem acompanha os retornos feitos e os que continuam pendentes?'],
       ['Revisar', 'Retorno e visita', 'Na revisão, confira quais conversas voltaram a andar e quais geraram uma visita ou uma nova ação.', 'Quantas retomadas viraram avanço e em que etapa?']
     ]
@@ -82,7 +82,7 @@ const flows = {
     stages: [
       ['Captar', 'Primeira captação', 'Registre a entrada e o primeiro avanço com um proprietário. Use a atividade para localizar quem precisa de apoio.', 'Quanto tempo se passa até a primeira captação?'],
       ['Visitar', 'Primeira visita', 'Confira se as conversas geraram visitas. A etapa indica onde pode fazer sentido revisar a abordagem ou a preparação.', 'Onde a atividade é registrada e quem revisa?'],
-      ['Fechar', 'Primeira venda', 'Acompanhe o tempo até o contrato. O caso dos 11 meses é uma referência individual discutida na reunião.', 'Qual é o tempo típico até a primeira venda por turma de entrada?']
+      ['Fechar', 'Primeira venda', 'Compare o tempo até a primeira venda com a atividade registrada antes dela. O corretor citado levou cerca de 11 meses.', 'Qual é o tempo típico até a primeira venda por turma de entrada?']
     ]
   }
 };
@@ -130,31 +130,6 @@ tabs.forEach((tab, index) => {
   });
 });
 Object.keys(flows).forEach(renderFlow);
-
-const player = document.querySelector('#player');
-const poster = document.querySelector('#video-poster');
-function pauseVideo() {
-  player.replaceChildren();
-  player.hidden = true;
-  poster.hidden = false;
-}
-document.querySelector('#play').addEventListener('click', () => {
-  const frame = document.createElement('iframe');
-  frame.title = 'Gestão imobiliária com Maike Terres';
-  frame.src = 'https://www.youtube-nocookie.com/embed/1p6KDrkALcE?autoplay=1&rel=0';
-  frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-  frame.referrerPolicy = 'strict-origin-when-cross-origin';
-  frame.allowFullscreen = true;
-  const close = document.createElement('button');
-  close.className = 'close-video';
-  close.type = 'button';
-  close.textContent = 'Fechar vídeo';
-  close.addEventListener('click', () => { pauseVideo(); document.querySelector('#play').focus(); });
-  player.replaceChildren(frame, close);
-  player.hidden = false;
-  poster.hidden = true;
-  close.focus();
-});
 
 const feedback = document.querySelector('#copied');
 const fallback = document.querySelector('#copy-fallback');
